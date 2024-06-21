@@ -1,3 +1,7 @@
+/* Criar table para manupulação e teste das consultas */
+
+CREATE TABLE transactions (transaction_id INT PRIMARY KEY, customer_id INT, transaction_date DATE, transaction_amount DECIMAL(10, 2));
+
 /* Inicialmente, será determinada a data da primeira transação relacionada a cada customer_id, de acordo com seu mês de ativação, ou seja, o mês que foi feita a primeira transação. 
 Para isso, defino um alias para a menor data de transação, e outro para o mês da menor data de transação. Os dados devem ser agrupados por customer_id para puxar as datas de transações 
 relacionadas a um mesmo cliente. */
