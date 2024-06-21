@@ -22,6 +22,3 @@ Analisar uma base fictícia com transações realizadas ao longo de 2023, com um
 - Visão safrada
 - TPV Rolling
 - Visão de churn
-
-  
-// Disclaimer: Esse projeto faz parte do case técnico proposto pelo time de Analytics da Stone em processo seletivo. 
