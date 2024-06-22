@@ -1,3 +1,6 @@
+/* Pergunta: Crie uma query que mostre o TPV rolling 7 para cada dia na tabela de transações baseada na ‘transaction_date’. 
+A visão deve incluir ref_date, soma do tpv nos últimos 7 dias e número de clientes ativos nos últimos 7 dias. */
+
 /* Comentários sobre otimização do código: 
 Foram utilizadas ctes para calcular rolling_tpv_7 e active_customers_7 separadamente, evitando 
 repetir os cálculos para cada linha de cada table. O join utilizado foi o LEFT JOIN, para garantir que todas as datas de t1 sejam 
