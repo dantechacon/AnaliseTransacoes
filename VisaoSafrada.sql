@@ -1,3 +1,6 @@
+/*Pergunta: Crie uma query em SQL de retenção mensal de TPV (Total Payment Volume) contendo o volume de pagamento ao longo do tempo a 
+partir da data da primeira transação. O objetivo é medir a quantidade de TPV retido em cada período subsequente à primeira transação. */
+
 /* Inicialmente, será determinada a data da primeira transação relacionada a cada customer_id, de acordo com seu mês de ativação, 
 ou seja, o mês que foi feita a primeira transação. Para isso, defino um alias para a menor data de transação, 
 e outro para o mês da menor data de transação. Os dados devem ser agrupados por customer_id para puxar as datas de transações 
