@@ -6,7 +6,7 @@ relacionadas a um mesmo cliente. */
 WITH first_transaction AS (
   SELECT customer_id, 
   MIN(transaction_date) AS first_transaction_date, 
-  DATE_FORMAT(MIN(transaction_date), '%Y-%m') AS activate_month
+  DATE_FORMAT(MIN(transaction_date), '%Y-%m') AS activate_month --date_format em gcp pode ser substituído por format_date ou parse_date, por ex.
 FROM transactions 
 GROUP BY customer_id), monthly_tpv AS (
   
@@ -39,14 +39,14 @@ FROM tpv_with_safra
   WHERE safra = 0 GROUP BY activate_month)
   
 /* Por fim, na seleção final, definimos o campo de retained_tpv - calculado pela soma do tpv mensal, e a representatividade do r
-etained_tpv em percentual. Perceba que, nesse cenário que tratamos de valores de transações, utilizamos a função COALESCE para ignorar 
-valores nulos que possam existir em períodos que um ou mais clientes não realizaram transações. 
+etained_tpv em percentual. Perceba que, nesse cenário que tratamos de valores de transações, utilizamos a função COALESCE para evitar 
+divisões por valores nulos que possam existir em períodos que um ou mais clientes não realizaram transações. 
 Sendo assim, se o total_tpv ou montlhy_tpv forem nulos, o percentual não será afetado. */
   
 SELECT t.activate_month, 
   t.safra, 
   SUM(t.monthly_tpv) AS retained_tpv, 
-  (SUM(t.monthly_tpv) / COALESCE(tt.total_tpv, 1)) * 100 AS retained_tpv_percentage
+  (SUM(t.monthly_tpv) / COALESCE(tt.total_tpv, 1)) * 100 AS retained_tpv_percentage --calculando o tpv retido em percentual com apoio do coalesce para evitar divisões por zero
 FROM tpv_with_safra t
 JOIN totaltpv_por_activate_month tt 
   ON t.activate_month = tt.activate_month
