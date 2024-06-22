@@ -1,7 +1,6 @@
-/* Inputs sobre otimização do código: a consulta criada inicialmente trazia subconsultas, mas por critério de eficiência, substituí por um join.
-Foram utilizadas ctes para calcular rolling_tpv_7 e active_customers_7 separadamente, evitando repetir os cálculos para cada linha de cada 
-table. O join utilizado foi o LEFT JOIN, para garantir que todas as datas de t1 sejam consideradas, mesmo que não haja correspondência em t2. 
-Isso pode ser ajustado dependendo do objetivo (haver nulidade nos resultados ou não).*/
+/* Inputs sobre otimização do código: Foram utilizadas ctes para calcular rolling_tpv_7 e active_customers_7 separadamente, evitando repetir 
+os cálculos para cada linha de cada table. O join utilizado foi o LEFT JOIN, para garantir que todas as datas de t1 sejam consideradas, 
+mesmo que não haja correspondência em t2, o que pode ser ajustado dependendo do objetivo (haver nulidade nos resultados ou não).*/
 
 /* No primeiro momento, definimos a data de referência para ser trazida no resultado da consulta, a qual é atribuída pela data da transação, 
 de acordo com o intervalos que definirmos na subquery. Após isso, calculamos o tpv para as transações dos últimos 7 dias. 
