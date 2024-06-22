@@ -21,4 +21,4 @@ Analisar uma base fictícia com transações realizadas ao longo de 2023, com um
 
 - Visão safrada: a partir dela, temos como objetivo identificar padrões de retenção de TPV ao longo do tempo, assim como, avaliar a eficácia de estratégias de retenção de clientes ao analisar como o TPV retido evolui mês a mês.
 - TPV Rolling: com ela, podemos avaliar tendências de curto prazo no volume de transações, sazonalidade ou eventos específicos que impactam positiva ou negativamente o TPV diário de cada cliente.
-- Visão de churn: com o range de 28 dias, há uma definição mais assertiva de clientes inativos, o que nos possibilita o acompanhamento sazonal de aumentos ou diminuições da taxa de churn, e de eficácia das estratégias adotadas pelo time para diminuição de churn e aumento de vida útil de cada customer_id.
+- Visão de churn: com o range de 28 dias proposto pelo filtro, há uma definição mais assertiva de clientes inativos, o que nos possibilita o acompanhamento sazonal de aumentos ou diminuições da taxa de churn, e de eficácia das estratégias adotadas pelo time para diminuição de churn e aumento de vida útil de cada customer_id.
