@@ -1,4 +1,4 @@
-# Objetivos:
+# Objetivo:
 
 Analisar uma base com transações realizadas ao longo de 2023, com um total de aproximadamente 20 milhões de linhas. O código desse projeto foi construído com linguagem SQL e fornece visões relacionadas à retenção mensal de TPV (total payment value, em português - volume total de pagamento), TPV rolling (utilizada para calcular a soma do TPV nos últimos dias para cada dia presente na base de dados), e Churn (utilizada para medir a quantidade de clientes que deixaram de fazer transações por um período determinado - no caso desse projeto, 28 dias).
 
