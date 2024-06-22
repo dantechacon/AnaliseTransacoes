@@ -1,14 +1,3 @@
-/* Criar table para manipulação e teste das consultas. Os testes foram realizados com MySQL e SQLite, mas no segundo caso foram adaptadas
-as consultas por limitação de aceite de sintaxe do SQLite com DATE ADD, DATE_FORMAT, etc. Em todos os casos, as consultas entregaram as 
-seleções com sucesso. */
-
-CREATE TABLE transactions (
-    transaction_id INT PRIMARY KEY,
-    customer_id INT,
-    transaction_date DATE,
-    transaction_amount DECIMAL(10, 2)
-);
-
 /* Inicialmente, será determinada a data da primeira transação relacionada a cada customer_id, de acordo com seu mês de ativação, 
 ou seja, o mês que foi feita a primeira transação. Para isso, defino um alias para a menor data de transação, 
 e outro para o mês da menor data de transação. Os dados devem ser agrupados por customer_id para puxar as datas de transações 
