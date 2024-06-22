@@ -1,3 +1,6 @@
+/* Pergunta: Crie uma query que identifique os clientes que completaram 28 dias sem transacionar, agrupado por mês. 
+A visão deve incluir ref_month e número de clientes que não realizaram transações nos últimos 28 dias (agrupados por mês) */
+
 /* Comentários sobre otimização e performance do código: 
 Novamente, adotamos uma cte para conceder mais clareza na leitura e facilidadena manutenção da query, assim como, 
 o outer join é trazido novamente como o left join, trazendo meses referenciais, mesmo sem transações dos clientes - registro de atividade. */
